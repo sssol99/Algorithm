@@ -40,7 +40,7 @@ public class SWEA3752 {
 					if(dp[j] < i && dp[j] >-1) {
 						//여기서 
 						//if(dp[j+arr[i]] == -1) 
-							dp[j+arr[i]] = i;
+						if(dp[j+arr[i]] == -1)dp[j+arr[i]] = i;
 
 					}
 
