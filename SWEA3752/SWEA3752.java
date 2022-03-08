@@ -39,7 +39,7 @@ public class SWEA3752 {
 					// B. 값이 있어야 arr[i]값을 더해 다음 값을 만들 수 있으니 -1보다 클 때를 두 번째 조건으로
 					if(dp[j] < i && dp[j] >-1) {
 						//여기서 
-						//if(dp[j+arr[i]] == -1) 
+						if(dp[j+arr[i]] == -1) 
 							dp[j+arr[i]] = i;
 
 					}
