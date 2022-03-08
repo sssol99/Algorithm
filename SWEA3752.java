@@ -7,7 +7,7 @@ public class SWEA3752 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		//ÀÔ·ÂºÎ
+		//ìž…ë ¥ë¶€
 		int TK = Integer.parseInt(br.readLine());	
 		for(int t = 1 ; t <= TK ; t++) {
 			int sum = 0;
@@ -20,7 +20,7 @@ public class SWEA3752 {
 				sum+=arr[i];
 			}
 
-			//¿©±â¼­ºÎÅÍ ¹®Á¦ÇØ°áÀÔ´Ï´Ù
+			//ì—¬ê¸°ì„œë¶€í„° ë¬¸ì œí•´ê²°ìž…ë‹ˆë‹¤
 
 			int[] dp = new int[sum+1];
 			for(int i = 0 ; i <= sum ; i++) {
@@ -28,13 +28,13 @@ public class SWEA3752 {
 			}
 
 
-			//i°³ ¸ÂÃèÀ»¶§
+			//iê°œ ë§žì·„ì„ë•Œ
 			for(int i = 0 ; i < N ; i++) {	
 				if (dp[arr[i]] == -1) dp[arr[i]] = i;
 				for(int j = 0 ; j <= sum ; j++) {
-
-					if(dp[j] < i) {
-						dp[j+arr[i]] = i;
+					
+					if(dp[j] < i && dp[j] >-1) {					
+						if(dp[j+arr[i]] == -1) dp[j+arr[i]] = i;
 
 					}
 
