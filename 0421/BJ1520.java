@@ -14,8 +14,7 @@ public class BJ1520 {
 	static int J;
 	static int arr[][];
 	static int ck[][];
-	static int res;
-	static int now;
+
 	static int[] di = {-1,0,1,0};
 	static int[] dj = {0,1,0,-1};
 
@@ -29,8 +28,7 @@ public class BJ1520 {
 		J = Integer.parseInt(stk.nextToken());
 		arr = new int[I][J];
 		ck = new int[I][J];
-		res = 0;
-		now = 1;
+		
 		for(int i = 0 ; i < I ; i ++) {
 			stk = new StringTokenizer(br.readLine());
 			for(int j = 0 ; j < J ; j++) {
