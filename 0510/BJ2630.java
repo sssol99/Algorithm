@@ -40,7 +40,7 @@ public class BJ2630 {
 		if(tmp == n*n) { // 다 1이면 blue
 			blue++;
 			return;
-		}else if(tmp==0) { //다 0이면 white
+		}else if(tmp==0) { //다 0이면 white.
 			white++;
 			return;
 		}else {//아니면 또 쪼개야함
